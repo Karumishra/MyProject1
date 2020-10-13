@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 20px;
+            background-image: url('../static/bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+        }
+
+        mark {
+            background-color: cyan;
+            color: black;
+        }
+
+        #one {
+            background-color: red;
+            color: white;
+        }
+
+        p {
+            font-size: 22px;
+            color: white;
+            text-align: right;
+            margin-right: -20px;
+        }
+
+        
+
+        h4 {
+            position: relative;
+            left: -85px;
+        }
+
+        strong {
+            font-size: 30px;
+        }
+
+        a {
+            color: rgb(0, 255, 179);
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Upload the file here</title>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <img  class="float-left" src="../static/logo.jpeg" height=250 width=250 align="left" >
+
+                <h4> Project on: </h4>
+                <h1> <mark> Suspicious Email Detection System </mark> </h1>
+                <p> By: </p>
+                <p>Karan Raj<br>Divyanshu Upadhyay<br>Karunakar Mishra<br>Swarnim Shikhar </p>
+
+                <a href="https://en.wikipedia.org/wiki/Email_spam" target="_blank">Click to know more about Email
+                    Spam</a>
+                <br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m-auto">
+                <h1 class="text-center"><span class="text-light bg-danger">Upload the file here to check for spam:</span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 m-auto text-center">
+                <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+
+                    
+                    <!-- <input id="file-picker" type="file" name="file" accept="application/pdf,image/*" multiple> -->
+                    <br>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="file" accept="application/pdf,image/*"
+                            required>
+                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+
+                    </div>
+                    <div id="msg"></div>
+                    <br><br>
+                    <input type="submit" class="btn btn-primary" value="CHECK!" id="upload-button" size="75">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- <script>
+
+    $("#file-picker").change(function(){
+
+        var input = document.getElementById('file-picker');
+
+        for (var i=0; i<input.files.length; i++)
+        {
+
+            var ext= input.files[i].name.substring(input.files[i].name.lastIndexOf('.')+1).toLowerCase()
+
+            if ((ext == 'jpg') || (ext == 'png') || (ext == 'jpeg') || (ext == 'pdf') )
+            {
+                $("#msg").text("Files are supported")
+            }
+            else
+            {
+                $("#msg").text("Files are NOT supported")
+                document.getElementById("file-picker").value ="";
+            }
+
+        }
+
+
+    } );
+
+</script> -->
+
+</html>
