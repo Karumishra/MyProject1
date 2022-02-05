@@ -3,7 +3,7 @@ Suspicious Email Detection System
 
 # PROBLEM STATEMENT 
 
-Spam emails cause inconvenience and fnancial loss to the recipients so there is a need to flter them and separate them from the legitimate emails. Many algorithms and flters have been developed to detect the spam emails and Most of these methods use either header-based or content-based features. Spammers continuously evolve and sophisticate their spamming techniques and can bypass these methods easily due to which the existing flters are becoming less effective.
+Spam emails cause inconvenience and financial loss to the recipients so there is a need to flter them and separate them from the legitimate emails. Many algorithms and flters have been developed to detect the spam emails and Most of these methods use either header-based or content-based features. Spammers continuously evolve and sophisticate their spamming techniques and can bypass these methods easily due to which the existing flters are becoming less effective.
 
 # Objective
 
